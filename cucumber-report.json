@@ -1,0 +1,92 @@
+[
+  {
+    "description": "  As a user\n  I want to login to Sauce Labs platform\n  So that I can access my testing account",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-login-to-sauce-labs;verify-login-with-different-user-credentials",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Verify login with different user credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 345518700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the Sauce Labs login page",
+            "match": {
+              "location": "features\\step-definitions\\loginSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2560400999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "An user enter valid credentials with email \"invalid_user@test.com\" and password \"wrongpassword\"",
+            "match": {
+              "location": "features\\step-definitions\\loginSteps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2003762800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click the submit button",
+            "match": {
+              "location": "features\\step-definitions\\loginSteps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149284200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see the \"user name/password combination is invalid.\" message",
+            "match": {
+              "location": "features\\step-definitions\\loginSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 529187899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 140194299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-login-to-sauce-labs",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Login to Sauce Labs",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]
