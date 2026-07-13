@@ -10,5 +10,5 @@ Feature: User Login to Sauce Labs
     Then I should see the "<expectedResult>" message
 
     Examples:
-      | email                  | password       | expectedResult                               |
-      | invalid_user@test.com  | wrongpassword  | user name/password combination is invalid.                     |
+      | email                 | password      | expectedResult                             |
+      | invalid_user@test.com | wrongpassword | user name/password combination is invalid. |

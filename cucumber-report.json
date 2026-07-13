@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 345518700
+              "duration": 432802899
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 7,
             "name": "I navigate to the Sauce Labs login page",
             "match": {
-              "location": "features\\step-definitions\\loginSteps.ts:9"
+              "location": "features\\step-definitions\\loginSteps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 2560400999
+              "duration": 2640957900
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 8,
             "name": "An user enter valid credentials with email \"invalid_user@test.com\" and password \"wrongpassword\"",
             "match": {
-              "location": "features\\step-definitions\\loginSteps.ts:15"
+              "location": "features\\step-definitions\\loginSteps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 2003762800
+              "duration": 1977923100
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 9,
             "name": "I click the submit button",
             "match": {
-              "location": "features\\step-definitions\\loginSteps.ts:21"
+              "location": "features\\step-definitions\\loginSteps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 149284200
+              "duration": 346912500
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 10,
             "name": "I should see the \"user name/password combination is invalid.\" message",
             "match": {
-              "location": "features\\step-definitions\\loginSteps.ts:26"
+              "location": "features\\step-definitions\\loginSteps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 529187899
+              "duration": 531834800
             }
           },
           {
@@ -74,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 140194299
+              "duration": 138716800
             }
           }
         ],
