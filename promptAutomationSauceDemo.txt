@@ -1,0 +1,364 @@
+# Prompt – Playwright + Node.js + Cucumber + Page Object Model
+
+You are a Senior QA Automation Engineer with expertise in Playwright, Node.js and Behavior Driven Development (BDD).
+
+Your task is to create a complete automation framework from scratch using Playwright with Node.js and Cucumber, following software engineering best practices and clean architecture principles.
+
+## Technical Requirements
+
+Create the project using:
+
+* Node.js
+* Playwright
+* Cucumber (Gherkin)
+* JavaScript (ES6 Modules)
+* Page Object Model (POM)
+
+Initialize the project and configure all required dependencies.
+
+The generated solution must be executable immediately after running:
+
+```bash
+npm install
+npx playwright install
+npm test
+```
+
+---
+
+## Project Structure
+
+Generate the following structure:
+
+```
+playwright-cucumber-framework/
+│
+├── features/
+│   ├── purchase.feature
+│   └── step-definitions/
+│       └── purchase.steps.js
+│
+├── pages/
+│   ├── LoginPage.js
+│   ├── InventoryPage.js
+│   ├── CartPage.js
+│   ├── CheckoutPage.js
+│   ├── CheckoutOverviewPage.js
+│   └── CheckoutCompletePage.js
+│
+├── hooks/
+│   ├── hooks.js
+│   └── world.js
+│
+├── utils/
+│   ├── constants.js
+│   └── testData.js
+│
+├── playwright.config.js
+├── cucumber.js
+├── package.json
+└── README.md
+```
+
+---
+
+## Framework Requirements
+
+Apply the Page Object Model design pattern.
+
+Each Page Object must:
+
+* Encapsulate all locators.
+* Expose reusable business methods.
+* Avoid duplicated code.
+* Never contain assertions.
+
+Assertions must only exist inside Step Definitions.
+
+Use descriptive method names.
+
+Example:
+
+```
+login()
+
+addProductToCart()
+
+openCart()
+
+startCheckout()
+
+fillShippingInformation()
+
+continueCheckout()
+
+finishPurchase()
+
+getConfirmationMessage()
+```
+
+---
+
+## Coding Standards
+
+Follow these best practices:
+
+* Single Responsibility Principle
+* Clean Code
+* Reusable methods
+* No hardcoded selectors outside Page Objects
+* Explicit assertions
+* Stable Playwright locators using data-test attributes
+* Async/Await
+* Meaningful variable names
+* Avoid unnecessary waits
+* Avoid Thread.sleep equivalents
+* Prefer Playwright auto waiting
+
+---
+
+## Test Data
+
+Use the following credentials:
+
+Username:
+
+```
+standard_user
+```
+
+Password:
+
+```
+secret_sauce
+```
+
+Shipping Information
+
+First Name
+
+```
+Christian
+```
+
+Last Name
+
+```
+Barrios
+```
+
+Postal Code
+
+```
+1111
+```
+
+Store all test data in a separate file.
+
+---
+
+## Business Scenario
+
+Automate the complete purchase flow for the website:
+
+https://www.saucedemo.com/
+
+The automation must perform the following steps:
+
+### Step 1
+
+Open the SauceDemo application.
+
+Verify the Login page is displayed.
+
+---
+
+### Step 2
+
+Login using:
+
+standard_user
+
+secret_sauce
+
+Verify the Inventory page is displayed.
+
+---
+
+### Step 3
+
+Add the following product to the shopping cart:
+
+Sauce Labs Bike Light
+
+Verify the cart badge displays one product.
+
+---
+
+### Step 4
+
+Open the shopping cart.
+
+Verify the selected product exists inside the cart.
+
+---
+
+### Step 5
+
+Click Checkout.
+
+Verify the Checkout Information page is displayed.
+
+---
+
+### Step 6
+
+Complete all checkout fields.
+
+First Name
+
+Christian
+
+Last Name
+
+Barrios
+
+Postal Code
+
+1111
+
+Click Continue.
+
+---
+
+### Step 7
+
+Verify the Checkout Overview page.
+
+Validate:
+
+* Product Name
+* Payment Information
+* Shipping Information
+* Total Price
+
+---
+
+### Step 8
+
+Click Finish.
+
+---
+
+### Step 9
+
+Validate the purchase completion page.
+
+Assert that the confirmation message is exactly:
+
+```
+Thank you for your order!
+```
+
+Also verify that the confirmation image is displayed.
+
+---
+
+## Gherkin Feature
+
+Generate a feature file using clear business language.
+
+Example:
+
+```
+Feature: Purchase products in SauceDemo
+
+Scenario: Successful purchase
+
+Given the user opens SauceDemo
+
+When the user logs in with valid credentials
+
+And adds the Sauce Labs Bike Light product to the cart
+
+And proceeds to checkout
+
+And completes the shipping information
+
+And finishes the purchase
+
+Then the confirmation message "Thank you for your order!" should be displayed
+```
+
+---
+
+## Hooks
+
+Create Before and After hooks.
+
+Before:
+
+* Launch browser
+* Create browser context
+* Open new page
+
+After:
+
+* Close page
+* Close context
+* Close browser
+
+---
+
+## Assertions
+
+Include assertions for:
+
+* Login page loaded
+* Inventory page loaded
+* Cart contains the selected product
+* Checkout page loaded
+* Checkout overview loaded
+* Purchase completed successfully
+* Confirmation message equals:
+
+```
+Thank you for your order!
+```
+
+---
+
+## Configuration
+
+Configure:
+
+* Playwright
+* Cucumber
+* npm scripts
+* Browser execution
+* Headless execution
+* HTML report
+* Screenshot on failure
+* Trace on failure
+
+---
+
+## Deliverables
+
+Generate all project files completely.
+
+Do not omit any file.
+
+Include:
+
+* package.json
+* playwright.config.js
+* cucumber.js
+* Feature file
+* Step Definitions
+* Hooks
+* Page Objects
+* Utilities
+* README.md with installation and execution instructions.
+
+The generated code must compile successfully, follow clean architecture principles, and be production-ready.
